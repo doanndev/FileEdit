@@ -1,13 +1,4 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Giới thiệu và hướng dẫn chạy ứng dụng AI Studio
-
-Đây là một ứng dụng web nhỏ được xây dựng bằng Vite + React + TypeScript, tích hợp API Gemini để cung cấp chức năng hỗ trợ AI cho việc chỉnh sửa và xử lý file. Ứng dụng cho phép bạn xem, chỉnh sửa nội dung và tận dụng các mô-đun AI để xử lý văn bản trực tiếp trong trình duyệt.
-
-Bạn có thể xem ứng dụng trên AI Studio tại:
-https://ai.studio/apps/drive/1TSM5Yb9rbdwvrJjl90QP3sJmI4rprVZZ
 
 ## Những tính năng chính
 - Chỉnh sửa file văn bản với giao diện web đơn giản.
