@@ -1,0 +1,7 @@
+{
+  "name": "FileEdit - Professional Document Processing",
+  "description": "A comprehensive document management platform for merging, compressing, converting, and OCR processing PDFs and Office files with batch support.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
