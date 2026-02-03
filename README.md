@@ -4,6 +4,8 @@
 - Chỉnh sửa file văn bản với giao diện web đơn giản.
 - Hỗ trợ AI (Gemini) để gợi ý, tóm tắt hoặc sửa nội dung.
 - Xem trước và lưu thay đổi cục bộ.
+- **🌙 Chế độ sáng/tối (Theme):** Hỗ trợ Light, Dark và System (tự động theo hệ thống). Cài đặt được lưu vào localStorage.
+- **🌐 Đa ngôn ngữ (i18n):** Hỗ trợ Tiếng Anh và Tiếng Việt. Tự động phát hiện ngôn ngữ trình duyệt.
 
 ## Chạy cục bộ
 
@@ -24,6 +26,9 @@ Sau khi server chạy, mở trình duyệt và truy cập URL hiển thị trong
 
 ## Cấu trúc dự án (tóm tắt)
 - `App.tsx`, `index.tsx`, `index.html` — entrypoint của ứng dụng.
+- `contexts/ThemeContext.tsx` — Theme Provider (dark/light/system mode).
+- `contexts/LanguageContext.tsx` — Language Provider (đa ngôn ngữ i18n).
+- `components/SettingsDropdown.tsx` — UI cài đặt theme và ngôn ngữ.
 - `services/geminiService.ts` — lớp/tiện ích gọi Gemini API.
 - `services/fileService.ts` — logic thao tác file.
 - `types.ts`, `constants.tsx` — kiểu và hằng số dự án.
