@@ -1,6 +1,7 @@
 
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 import { TOOLS, MAX_FILE_SIZE } from './constants';
 import { AppFile, Activity, Tool, UserPlan } from './types';
 import { INITIAL_ACTIVITY, formatFileSize, processFileMock } from './services/fileService';
@@ -351,7 +352,10 @@ export default function App() {
     // Validate
     const oversized = fileList.filter(f => f.size > MAX_FILE_SIZE);
     if (oversized.length > 0) {
-      alert(`Some files are too large (max ${formatFileSize(MAX_FILE_SIZE)})`);
+      toast.error(`Some files are too large (max ${formatFileSize(MAX_FILE_SIZE)})`, {
+        duration: 4000,
+        icon: '⚠️',
+      });
       return;
     }
 
@@ -395,6 +399,30 @@ export default function App() {
 
   return (
     <HashRouter>
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#1e293b',
+            color: '#fff',
+            borderRadius: '12px',
+            padding: '16px',
+          },
+          success: {
+            iconTheme: {
+              primary: '#10b981',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
       <div className="flex flex-col min-h-screen bg-[#f6f6f8] dark:bg-slate-900 transition-colors duration-300">
         <Header searchQuery={searchQuery} onSearch={setSearchQuery} />
         
